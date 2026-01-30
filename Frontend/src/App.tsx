@@ -13,6 +13,13 @@ import MarketMap from "./pages/Marketmap";
 import ProductDetail from "./pages/ProductDetail";
 import Products from "./pages/Products";
 
+
+import AdminLayout from "./pages/admin/AdminLayout";
+import FlaggedReports from "./pages/admin/FlaggedReports";
+import InspectReport from "./pages/admin/InspectReport";
+import MarketHealth from "./pages/admin/MarketHealth";
+import UserActivity from "./pages/admin/UserActivity";
+
 function App() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col w-full">
@@ -87,7 +94,6 @@ function App() {
               }
             />
 
-            
             <Route
               path="/products"
               element={
@@ -104,6 +110,22 @@ function App() {
                 </ProtectedRoute>
               }
             />
+
+            
+            <Route
+              path="/admin"
+              element={
+                <ProtectedRoute>
+                  <AdminLayout />
+                </ProtectedRoute>
+              }
+            >
+              <Route index element={<FlaggedReports />} />
+              <Route path="flagged-reports" element={<FlaggedReports />} />
+              <Route path="inspect/:id" element={<InspectReport />} />
+              <Route path="markets" element={<MarketHealth />} />
+              <Route path="users" element={<UserActivity />} />
+            </Route>
             
             <Route path="*" element={<Home />} />
           </Routes>

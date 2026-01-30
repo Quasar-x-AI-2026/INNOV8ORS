@@ -10,6 +10,7 @@ import trendRoute from "./routes/trendRoute";
 import statsRoute from "./routes/statsRoute";
 import marketmapRoute from "./routes/marketmapRoute";
 import productRoute from "./routes/productRoute";
+import adminRoutes from "./routes/adminRoute"; // 🔥 NEW IMPORT
 
 const app = express();
 
@@ -41,6 +42,7 @@ app.use('/api/stats', statsRoute);
 app.use('/api/trends', trendRoute);
 app.use('/api/markets', marketmapRoute);
 app.use('/api/products', productRoute);
+app.use('/api/admin', adminRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
