@@ -21,7 +21,7 @@ export default function Onboarding() {
       }
 
       const response = await onboardUser(payload);
-      console.log('✅ Onboarding successful:', response);
+      console.log('Onboarding successful:', response);
       
       // Redirect based on role
       if (role === 'admin') {
@@ -30,7 +30,7 @@ export default function Onboarding() {
         navigate('/');
       }
     } catch (err: any) {
-      console.error('❌ Onboarding failed:', err);
+      console.error(' Onboarding failed:', err);
       setError(err.message || 'Onboarding failed. Please try again.');
     } finally {
       setLoading(false);
@@ -124,7 +124,7 @@ export default function Onboarding() {
             </div>
           )}
 
-          {/* Submit Button */}
+       
           <button
             type="submit"
             disabled={loading}
