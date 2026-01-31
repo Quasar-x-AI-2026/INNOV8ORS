@@ -12,7 +12,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import MarketMap from "./pages/Marketmap";
 import ProductDetail from "./pages/ProductDetail";
 import Products from "./pages/Products";
-
+import InstallPWA from "./components/InstallPWA";
 
 import AdminLayout from "./pages/admin/AdminLayout";
 import FlaggedReports from "./pages/admin/FlaggedReports";
@@ -23,6 +23,8 @@ import UserActivity from "./pages/admin/UserActivity";
 function App() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col w-full">
+      <InstallPWA />
+      
       <SignedOut>
         <Routes>
           <Route path="/" element={<Login />} />
