@@ -51,10 +51,8 @@ Auth Context: Global state management for user sessions using React Context API.
 Deployment
 Database: MongoDB Atlas.
 
-Server: Heroku, AWS, or Render.
+Server:  Render.
 
 ML Service: Separate instance for Python environment compatibility.
 
-Client: Vercel or Netlify.
-
-Would you like me to generate the Python Flask code for the ML service or the TypeScript authentication controller for the backend?
+Client: Render and Vercel
